@@ -19,8 +19,7 @@ Ziel ist es mit Hilfe eines neuronalen Netzwerks eine möglichst genaue Vorhersa
 Aus dem Testset wurden einige Daten entnommen. Diese werden am Ende genutzt, um das Endergebnis des Hackathons zu bestimmen. 
 
 Dabei wird der Fehler über Folgenden Funktion bestimmt:
-
-![{\displaystyle \mathrm {ME} ={\frac {\sum _{i=1}^{n}y_{i}-x_{i}}{n}}.}](https://wikimedia.org/api/rest_v1/media/math/render/svg/ecf876e1201ae41e5924cc11bcc6d557e454fc4f)
+<img src="a2f90a7d72270a9d6a54e6671d0f7a16.png" alt="MAE" width="220"/>
 
 Es wird die Summe über alle Abweichungen zwischen dem erwarteten und dem berechneten Output berechnet und daraus der Durchschnitt gemeldet. Es handelt sich dabei um die mittlere absolute Abweichung oder mean absolute error.
 
@@ -46,7 +45,7 @@ train_X.describe()
 
 Als Frameworks für das neuronale Netzwerk bieten sich besonders Keras und Ludwig an.
 
-Für Keras gibt es hier ein Notebook, dass einen guten ersten Anhaltspunkt bietet: https://www.kaggle.com/podsyp/product-quality-with-keras
+Für Keras gibt es hier ein Notebook, das einen guten ersten Anhaltspunkt bietet: https://www.kaggle.com/podsyp/product-quality-with-keras
 
 Für Ludwig ist die erstklassige Dokumentation zu empfehlen: 
 https://ludwig-ai.github.io/ludwig-docs/?from=%40.
