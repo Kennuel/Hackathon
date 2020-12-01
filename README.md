@@ -45,9 +45,9 @@ function() {
 ```
 ## Zeitlicher Ablauf
 
-18:00 - 18:30 Willkommen und in Teams aufteilen
-18:30 - 23:30 Happy Hacking mit Spaß und Freude
-23:30         Ende und Auswertung
+* 18:00 - 18:30 Willkommen und in Teams aufteilen
+* 18:30 - 23:30 Happy Hacking mit Spaß und Freude
+* 23:30         Ende und Auswertung
 
 ## How to get started
 Der erste Schritt sollte es sein das oben genannte Repository zu klonen und sich die Daten einmal in einem Texteditor anzuschauen.
