@@ -27,7 +27,7 @@ Es wird die Summe über alle Abweichungen zwischen dem erwarteten und dem berech
 ## Ziel
 Es muss am Ende eine (Python)funktion existieren, in der wir einen Pfad zu einer CSV Datei angeben können. Diese CSV Datei wird das gleiche Format haben wie die oben angegebene. Die Funktion muss diese CSV laden und auf Basis ihrer Inhalte predictions auf einem vorher trainierten Netz oder Model gemacht werden.
 Am Ende muss diese Funktion den MAE zwischen der Prediction und der Qualityspalte angeben.
-** ACHTUNG: Wenn diese Funktion fehlt, dann können wir nicht auswerten -> dann gibts keine Gewinner **
+__ACHTUNG: Wenn diese Funktion fehlt, dann können wir nicht auswerten -> dann gibts keine Gewinner__
 PSEUDOCODE:
 ``` 
 function() {
