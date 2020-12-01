@@ -4,13 +4,14 @@ In der vorliegenden Aufgabe soll ein Datenset bearbeitet werden, dass aus den Se
 
 Das Datenset kann unter folgen Link gecloned werden: < GITLAB LINK ZUM DATENSET >.
 
-Ein Datensatz enthält dabei 18 Merkmale (Features). Die Daten finden sich in der data_X.csv:
-date_time, T_data_1_1, T_data_1_2, T_data_1_3, T_data_2_1, T_data_2_2, T_data_2_3, T_data_3_1, T_data_3_2, T_data_3_3, T_data_4_1 ,T_data_4_2, T_data_4_3, T_data_5_1, T_data_5_2, T_data_5_3, H_data, AH_data
+Ein Datensatz enthält dabei 18 Merkmale (Features). Sowie das Zieldatum: Quality - Die Daten finden sich in der data_X.csv:
+date_time, T_data_1_1, T_data_1_2, T_data_1_3, T_data_2_1, T_data_2_2, T_data_2_3, T_data_3_1, T_data_3_2, T_data_3_3, T_data_4_1 ,T_data_4_2, T_data_4_3, T_data_5_1, T_data_5_2, T_data_5_3, H_data, AH_data, quality
 
 **date_time** ist der Zeitpunkt des Beginns des Röstprozesses
 **T_data_X_Y** ist der Temperatursensor Y in einer der fünf Röstkammern X
 **H_data** Höhe des Produkts vor dem Rösten
 **AH_data** Feuchtigkeitsgehalt des Produkts vor dem Rösten
+**quality** Die Qualität des Produkts
 
 In der data_Y.csv findet sich die Qualität und der Timestamp der Prüfung. Die Werte reichen von 221 bis 505.
 
@@ -22,6 +23,26 @@ Dabei wird der Fehler über Folgenden Funktion bestimmt:
 <img src="a2f90a7d72270a9d6a54e6671d0f7a16.png" alt="MAE" width="220"/>
 
 Es wird die Summe über alle Abweichungen zwischen dem erwarteten und dem berechneten Output berechnet und daraus der Durchschnitt gemeldet. Es handelt sich dabei um die mittlere absolute Abweichung oder mean absolute error.
+
+### Ziel
+Es muss am Ende eine (Python)funktion existieren, in der wir einen Pfad zu einer CSV Datei angeben können. Diese CSV Datei wird das gleiche Format haben wie die oben angegebene. Die Funktion muss diese CSV laden und auf Basis ihrer Inhalte predictions auf einem vorher trainierten Netz oder Model gemacht werden.
+Am Ende muss diese Funktion den MAE zwischen der Prediction und der Qualityspalte angeben.
+
+PSEUDOCODE:
+``` 
+function() {
+    csv := loadCSV(path)
+    MAE = 0
+    model = load_model(modelPath)
+    preprocessedData = preprocessPipeline(csv)
+    for(row in preprocessedData) {
+        MAE = abs( model.predict(row) - row.quality)
+    }
+    MAE = MAE / preprocessedData.length
+    print(MAE)
+
+}
+```
 
 ## How to get started
 Der erste Schritt sollte es sein das oben genannte Repository zu klonen und sich die Daten einmal in einem Texteditor anzuschauen.
