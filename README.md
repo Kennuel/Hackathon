@@ -24,10 +24,10 @@ Dabei wird der Fehler über Folgenden Funktion bestimmt:
 
 Es wird die Summe über alle Abweichungen zwischen dem erwarteten und dem berechneten Output berechnet und daraus der Durchschnitt gemeldet. Es handelt sich dabei um die mittlere absolute Abweichung oder mean absolute error.
 
-### Ziel
+## Ziel
 Es muss am Ende eine (Python)funktion existieren, in der wir einen Pfad zu einer CSV Datei angeben können. Diese CSV Datei wird das gleiche Format haben wie die oben angegebene. Die Funktion muss diese CSV laden und auf Basis ihrer Inhalte predictions auf einem vorher trainierten Netz oder Model gemacht werden.
 Am Ende muss diese Funktion den MAE zwischen der Prediction und der Qualityspalte angeben.
-
+** ACHTUNG: Wenn diese Funktion fehlt, dann können wir nicht auswerten -> dann gibts keine Gewinner **
 PSEUDOCODE:
 ``` 
 function() {
@@ -43,6 +43,11 @@ function() {
 
 }
 ```
+## Zeitlicher Ablauf
+
+18:00 - 18:30 Willkommen und in Teams aufteilen
+18:30 - 23:30 Happy Hacking mit Spaß und Freude
+23:30         Ende und Auswertung
 
 ## How to get started
 Der erste Schritt sollte es sein das oben genannte Repository zu klonen und sich die Daten einmal in einem Texteditor anzuschauen.
