@@ -32,9 +32,9 @@ PSEUDOCODE:
 ``` 
 function() {
     csv := loadCSV(path)
-    MAE = 0
-    model = load_model(modelPath)
-    preprocessedData = preprocessPipeline(csv)
+    MAE := 0
+    model := load_model(modelPath)
+    preprocessedData := preprocessPipeline(csv)
     for(row in preprocessedData) {
         MAE = abs( model.predict(row) - row.quality)
     }
