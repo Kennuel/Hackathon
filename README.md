@@ -2,8 +2,6 @@
 ## Aufgabe
 In der vorliegenden Aufgabe soll ein Datenset bearbeitet werden, dass aus den Sensordaten einer Röstmaschine und der daraus resultierenden Produktqualität darstellt.
 
-Das Datenset kann unter folgen Link gecloned werden: < GITLAB LINK ZUM DATENSET >.
-
 Ein Datensatz enthält dabei 18 Merkmale (Features). Sowie das Zieldatum: Quality - Die Daten finden sich in der data_X.csv:
 date_time, T_data_1_1, T_data_1_2, T_data_1_3, T_data_2_1, T_data_2_2, T_data_2_3, T_data_3_1, T_data_3_2, T_data_3_3, T_data_4_1 ,T_data_4_2, T_data_4_3, T_data_5_1, T_data_5_2, T_data_5_3, H_data, AH_data, quality
 
