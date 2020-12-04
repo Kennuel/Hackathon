@@ -48,6 +48,22 @@ function() {
 * 23:30         Ende und Auswertung
 
 ## How to get started
+### Colab
+Google Colab ist eine online Variante von Jupyter Notebook. Jupyter Notebook ist ein interaktives Notebook für die Pythonprogrammierung.
+https://colab.research.google.com/
+
+
+### Installation von ludwig in colab
+!apt-get install libgmp-dev libmpfr-dev libmpc-dev
+!pip uninstall --yes ludwig
+!pip install ludwig
+!pip uninstall --yes tensorflow
+!pip uninstall --yes tensorflow-gpu
+!pip install tensorflow-gpu
+
+### Installation von Keras
+Durch die obige Installation von tensorflow ist keras mit dabei
+
 Der erste Schritt sollte es sein das oben genannte Repository zu klonen und sich die Daten einmal in einem Texteditor anzuschauen.
 
 Zur Bearbeitung bietet sich ein Google-Collab-Notebook an. Dieses kann unter folgendem Link erstellt werden: https://colab.research.google.com/
@@ -67,7 +83,36 @@ train_X = pd.read_csv('data_X.csv')
 train_X.describe()
 ```
 
-Als Frameworks für das neuronale Netzwerk bieten sich besonders Keras und Ludwig an.
+[MNIST Beispiel mit Keras](https://keras.io/examples/vision/mnist_convnet/)
+Ein Einstieg für Keras bietet dieser [Artikel](https://machinelearningmastery.com/regression-tutorial-keras-deep-learning-library-python/)
+[Einstiegs Beispiel für ludwig](https://ludwig-ai.github.io/ludwig-docs/examples/#simple-regression-fuel-efficiency-prediction)
+
+```python
+# Regression Example With Boston Dataset: Baseline
+from pandas import read_csv
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.wrappers.scikit_learn import KerasRegressor
+from sklearn.model_selection import cross_val_score
+from sklearn.model_selection import KFold
+# load dataset
+dataframe = read_csv("housing.csv", delim_whitespace=True, header=None)
+dataset = dataframe.values
+# split into input (X) and output (Y) variables
+X = dataset[:,0:13]
+Y = dataset[:,13]
+# define base model
+def baseline_model():
+	# create model
+	model = Sequential()
+	model.add(Dense(13, input_dim=13, kernel_initializer='normal', activation='relu'))
+	model.add(Dense(1, kernel_initializer='normal'))
+	# Compile model
+	model.compile(loss='mean_squared_error', optimizer='adam')
+	return model
+```
+
+Als Frameworks für das neuronale Netzwerk bieten sich besonders Keras oder Ludwig an.
 
 Für Keras gibt es hier ein Notebook, das einen guten ersten Anhaltspunkt bietet: https://www.kaggle.com/podsyp/product-quality-with-keras
 
