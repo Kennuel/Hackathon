@@ -48,6 +48,9 @@ function() {
 * 23:30         Ende und Auswertung
 
 ## How to get started
+
+Als Frameworks für das neuronale Netzwerk bieten sich besonders Keras oder Ludwig an.
+
 ### Colab
 Google Colab ist eine online Variante von Jupyter Notebook. Jupyter Notebook ist ein interaktives Notebook für die Pythonprogrammierung.
 https://colab.research.google.com/
@@ -67,11 +70,26 @@ Durch die obige Installation von tensorflow ist keras mit dabei
 Der erste Schritt sollte es sein das oben genannte Repository zu klonen und sich die Daten einmal in einem Texteditor anzuschauen.
 
 Zur Bearbeitung bietet sich ein Google-Collab-Notebook an. Dieses kann unter folgendem Link erstellt werden: https://colab.research.google.com/
+
 Es bietet sich an den Laufzeittyp auf GPU zu ändern. Dafür im Menü Laufzeit -> Laufzeittyp ändern auswählen.
+
 Die .csv-Dateien können in das Google-Collab-Notebook hochgeladen werden.
 
 Wichtige Bibliotheken, die importiert werden sollten sind numpy und pandas.
 
+### Einsteiger Tutorials und Beispiel
+[MNIST Beispiel mit Keras](https://keras.io/examples/vision/mnist_convnet/)
+
+Ein Einstieg für Keras bietet dieser [Artikel](https://machinelearningmastery.com/regression-tutorial-keras-deep-learning-library-python/)
+
+[Einstiegs Beispiel für ludwig](https://ludwig-ai.github.io/ludwig-docs/examples/#simple-regression-fuel-efficiency-prediction)
+
+Für Ludwig ist die [erstklassige Dokumentation](https://ludwig-ai.github.io/ludwig-docs/?from=%40.) zu empfehlen.
+
+Auch [dieser Blogartikel](https://gilberttanner.com/blog/introduction-to-ubers-ludwig) bietet einen ersten guten Überblick.
+
+
+### Codeschnipsel die helfen könnten
 ```python
 import numpy as np 
 import pandas as pd
@@ -82,10 +100,6 @@ import pandas as pd
 train_X = pd.read_csv('data_X.csv')
 train_X.describe()
 ```
-
-[MNIST Beispiel mit Keras](https://keras.io/examples/vision/mnist_convnet/)
-Ein Einstieg für Keras bietet dieser [Artikel](https://machinelearningmastery.com/regression-tutorial-keras-deep-learning-library-python/)
-[Einstiegs Beispiel für ludwig](https://ludwig-ai.github.io/ludwig-docs/examples/#simple-regression-fuel-efficiency-prediction)
 
 ```python
 # Regression Example With Boston Dataset: Baseline
@@ -111,15 +125,6 @@ def baseline_model():
 	model.compile(loss='mean_squared_error', optimizer='adam')
 	return model
 ```
-
-Als Frameworks für das neuronale Netzwerk bieten sich besonders Keras oder Ludwig an.
-
-Für Keras gibt es hier ein Notebook, das einen guten ersten Anhaltspunkt bietet: https://www.kaggle.com/podsyp/product-quality-with-keras
-
-Für Ludwig ist die erstklassige Dokumentation zu empfehlen: 
-https://ludwig-ai.github.io/ludwig-docs/?from=%40.
-Auch dieser Blogartikel bietet einen ersten guten Überblick:
-https://gilberttanner.com/blog/introduction-to-ubers-ludwig
 
 ## Was kann man alles probieren?
 Im folgenden ein paar Dinge, die man ausprobieren könnte, um bessere Ergebnisse zu erzielen:
