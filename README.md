@@ -11,8 +11,6 @@ date_time, T_data_1_1, T_data_1_2, T_data_1_3, T_data_2_1, T_data_2_2, T_data_2_
 **AH_data** Feuchtigkeitsgehalt des Produkts vor dem Rösten
 **quality** Die Qualität des Produkts
 
-In der data_Y.csv findet sich die Qualität und der Timestamp der Prüfung. Die Werte reichen von 221 bis 505.
-
 Ziel ist es mit Hilfe eines neuronalen Netzwerks eine möglichst genaue Vorhersage der Qualität aus den übergebenen Features zu berechnen.
 
 Aus dem Testset wurden einige Daten entnommen. Diese werden am Ende genutzt, um das Endergebnis des Hackathons zu bestimmen. 
